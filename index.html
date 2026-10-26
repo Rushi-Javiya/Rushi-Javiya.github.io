@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rushi Javiya — Developer & AI Agent Builder</title>
+  <meta name="description" content="Portfolio of Rushi Javiya — developer building AI agents, multi-agent systems and full-stack apps." />
+  <meta name="theme-color" content="#05070d" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader" id="loader"><span>RJ<i>.</i></span></div>
+
+  <!-- 3D background -->
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Custom cursor + scroll bar -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="progress" id="progress"></div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <a href="#home" class="logo">RJ<i>.</i></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow reveal"><span class="pulse"></span> Available for collaboration</p>
+        <h1 class="reveal" style="--d:.1s">
+          Hi, I'm<br />
+          <span class="grad">Rushi Javiya</span>
+        </h1>
+        <p class="role reveal" style="--d:.2s"><span id="typed"></span><span class="caret">|</span></p>
+        <p class="lead reveal" style="--d:.3s">
+          I build AI agents, multi-agent systems and full-stack apps — from Java and JavaScript
+          classics to LangGraph-powered tools that even trade gold.
+        </p>
+        <div class="cta reveal" style="--d:.4s">
+          <a href="#projects" class="btn primary">View my work</a>
+          <a href="#contact" class="btn ghost">Let's talk</a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker"></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="about-inner">
+        <p class="kicker reveal">01 — About</p>
+        <h2 class="reveal">Turning ideas into <span class="grad">working products</span>.</h2>
+        <div class="glass about-card tilt reveal">
+          <p>
+            I'm a developer who enjoys building things end to end. I started with <b>Java</b> and
+            <b>JavaScript</b> apps, moved into <b>TypeScript</b>, and now spend most of my time in
+            <b>Python</b> designing <b>multi-agent AI systems</b>, LLM tooling and automation.
+          </p>
+          <p>
+            One of my favourite projects is a risk-gated <b>XAUUSD day-trading toolkit</b> for MetaTrader 5 —
+            levels, entries, sizing, backtesting, journaling and a LangGraph + MCP agent on top.
+            I care about clean code and solid risk management, in software <i>and</i> in trading.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="glass stat tilt reveal"><b data-count="7">0</b><span>Public repos</span></div>
+          <div class="glass stat tilt reveal" style="--d:.1s"><b data-count="4" data-suffix="+">0</b><span>Languages</span></div>
+          <div class="glass stat tilt reveal" style="--d:.2s"><b data-count="2">0</b><span>AI agent projects</span></div>
+          <div class="glass stat tilt reveal" style="--d:.3s"><b>∞</b><span>Curiosity</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <p class="kicker reveal">02 — Tech Stack</p>
+      <h2 class="reveal">Tools I <span class="grad">build with</span>.</h2>
+      <div class="skill-grid" id="skillGrid"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <p class="kicker reveal">03 — Projects</p>
+      <h2 class="reveal">Selected <span class="grad">work</span>.</h2>
+      <div class="project-grid" id="projectGrid"></div>
+      <div class="more reveal">
+        <a class="btn ghost" href="https://github.com/Rushi-Javiya?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <p class="kicker reveal">04 — Contact</p>
+      <h2 class="big reveal">Let's build something <span class="grad">together</span>.</h2>
+      <p class="lead center reveal">
+        Have an idea, a project or just want to say hi? My inbox and DMs are open.
+      </p>
+      <div class="socials reveal" id="socialRow"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed & built by <b>Rushi Javiya</b> · <span id="year"></span></p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
